@@ -5,6 +5,8 @@ abstract class Route{
   static const BOARDING_PAGE = Path.BOARDING_PAGE;
   static const LOGIN_PAGE = Path.LOGIN_PAGE;
   static const HOME_PAGE = Path.HOME_PAGE;
+  static const CATEGORY_PAGE = Path.CATEGORY_PAGE;
+  static const MOSTPOPULER_PAGE = Path.MOSTPOPULER_PAGE;
   static const PROFILE_PAGE = Path.PROFILE_PAGE;
   static const SETTING_PAGE = Path.SETTING_PAGE;
 }
@@ -15,6 +17,8 @@ abstract class Path{
   static const BOARDING_PAGE = "/boarding";
   static const LOGIN_PAGE = "/login";
   static const HOME_PAGE = "/home";
+  static const CATEGORY_PAGE = "/category";
+  static const MOSTPOPULER_PAGE = "/mostpopuler";
   static const PROFILE_PAGE = "/profile";
   static const SETTING_PAGE = "/setting";
 }

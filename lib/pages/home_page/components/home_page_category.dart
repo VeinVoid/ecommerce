@@ -18,15 +18,15 @@ class HomePageCategory extends StatelessWidget {
           "Category",
           style: tsParaghraph20(fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: height * 0.02),
+        SizedBox(height: height * 0.01),
         Container(
           width: width,
-          height: width * 0.4,
+          height: height * 0.18,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 4,
             itemBuilder: (context, index) {
-              return categoryCard(width: width * 0.3, height: width * 0.3, categoryName: "asas", imageUrl: back);
+              return categoryCard(width: width * 0.31, height: height * 0.2, categoryName: "asas", imageUrl: back);
             },
           )
         ),

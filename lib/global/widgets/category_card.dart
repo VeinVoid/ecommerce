@@ -9,7 +9,7 @@ Widget categoryCard({
   required String imageUrl
   }){
   return Container(
-    margin: EdgeInsets.all(25),
+    margin: EdgeInsets.symmetric(horizontal: width * 0.1, vertical: height * 0.1),
     width: width,
     height: height,
     decoration: BoxDecoration(

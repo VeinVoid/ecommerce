@@ -25,12 +25,12 @@ Widget profileName({
           children: [
             Text(
               "Hallo",
-              style: tsParaghraph14(fontWeight: FontWeight.w500, isWhite: true),
+              style: tsParaghraph14(fontWeight: FontWeight.w500),
             ),
             SizedBox(height: 5),
             Text(
               name,
-              style: tsParaghraph20(fontWeight: FontWeight.w600, isWhite: true),
+              style: tsParaghraph20(fontWeight: FontWeight.w600),
             )
           ],
         ),

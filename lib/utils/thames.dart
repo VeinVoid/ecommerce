@@ -14,9 +14,9 @@ const Color generalColorDark = Color.fromARGB(255, 23, 23, 23);
 
 //BackDrop
 BoxShadow primaryBackDrop() => BoxShadow(
-  color: primeryColorMedium.withOpacity(0.1),
+  color: primeryColorDark.withOpacity(0.15),
   offset: Offset(0, 0),
-  blurRadius: 20,
+  blurRadius: 15,
 );
 
 BoxShadow generalBackDrop() =>  BoxShadow(

@@ -48,7 +48,8 @@ class HomePage extends StatelessWidget {
                 productLenght: homePageController.products.length, 
                 productName: homePageController.products.map((product) => product.productName).toList(), 
                 productPrice: homePageController.products.map((product) => product.productPrice).toList(), 
-                productImage: homePageController.products.map((product) => base64.decode(product.productImage)).toList()
+                productImage: homePageController.products.map((product) => base64.decode(product.productImage)).toList(),
+                productModel: homePageController.products,
               ))
             ],
           ),

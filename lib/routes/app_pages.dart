@@ -2,6 +2,8 @@ import 'package:ecommerce_mobile/pages/boarding_page/boarding_page_binding.dart'
 import 'package:ecommerce_mobile/pages/boarding_page/boarding_page_view.dart';
 import 'package:ecommerce_mobile/pages/category_page/category_page_binding.dart';
 import 'package:ecommerce_mobile/pages/category_page/category_page_view.dart';
+import 'package:ecommerce_mobile/pages/detail_page/detail_page_binding.dart';
+import 'package:ecommerce_mobile/pages/detail_page/detail_page_view.dart';
 import 'package:ecommerce_mobile/pages/home_page/home_page_binding.dart';
 import 'package:ecommerce_mobile/pages/home_page/home_page_view.dart';
 import 'package:ecommerce_mobile/pages/login_page/login_page_binding.dart';

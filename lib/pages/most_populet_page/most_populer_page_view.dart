@@ -18,7 +18,6 @@ class MostPopulerPage extends StatelessWidget {
           children: [
             HeaderMainPage(pageName: "Most Populer"),
             SizedBox(height: 10),
-            FilterMainPage(),
           ],
         ),
       ),

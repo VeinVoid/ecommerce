@@ -24,7 +24,7 @@ Widget horizontalProductCard({
     child: Row(
       children: [
         SizedBox(width: 15),
-        Image.asset(productImage),
+        SvgPicture.asset(productImage),
         SizedBox(width: 15),
         Row(
           children: [

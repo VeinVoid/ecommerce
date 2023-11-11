@@ -1,9 +1,19 @@
+import 'dart:typed_data';
 import 'package:ecommerce_mobile/global/widgets/category_card.dart';
 import 'package:ecommerce_mobile/utils/thames.dart';
 import 'package:flutter/material.dart';
 
 class HomePageCategory extends StatelessWidget {
-  const HomePageCategory({super.key});
+  const HomePageCategory({
+    super.key,
+    required this.categoryLenght,
+    required this.categoryName,
+    required this.categoryIcon,
+    });
+
+    final int categoryLenght;
+    final List<String> categoryName;
+    final List<Uint8List> categoryIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +33,16 @@ class HomePageCategory extends StatelessWidget {
           width: width,
           height: height * 0.18,
           child: ListView.builder(
+            physics: BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
-            itemCount: 4,
+            itemCount: categoryLenght,
             itemBuilder: (context, index) {
-              return categoryCard(width: width * 0.31, height: height * 0.2, categoryName: "asas", imageUrl: back);
+              return categoryCard(
+                width: width * 0.31, 
+                height: height * 0.2, 
+                categoryName: categoryName[index], 
+                imageBytes: categoryIcon[index]
+              );
             },
           )
         ),

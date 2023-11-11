@@ -1,7 +1,10 @@
 import 'dart:typed_data';
 import 'package:ecommerce_mobile/global/widgets/small_product_card.dart';
+import 'package:ecommerce_mobile/model/product_model.dart';
+import 'package:ecommerce_mobile/pages/detail_page/detail_page_view.dart';
 import 'package:ecommerce_mobile/utils/thames.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePageRecomended extends StatelessWidget {
   const HomePageRecomended({
@@ -10,12 +13,14 @@ class HomePageRecomended extends StatelessWidget {
     required this.productName,
     required this.productPrice,
     required this.productImage,
+    required this.productModel
     });
 
     final int productLenght;
     final List<String> productName;
     final List<int> productPrice;
     final List<Uint8List> productImage;
+    final List productModel;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +54,10 @@ class HomePageRecomended extends StatelessWidget {
                 margin: width * 0.02, 
                 productName: productName[index], 
                 productPrice: productPrice[index], 
-                productImage: productImage[index]
+                productImage: productImage[index],
+                onTap: () {
+                  Get.to(() => DetailPage(productModel: productModel[index]));
+                },
               );
             },
           ),

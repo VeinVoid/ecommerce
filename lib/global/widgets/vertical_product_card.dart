@@ -43,6 +43,8 @@ Widget verticalProductCard({
           child: Text(
             productName,
             style: tsParaghraph16(fontWeight: FontWeight.bold),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
         ),
         Container(

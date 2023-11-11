@@ -1,6 +1,5 @@
 import 'dart:typed_data';
 import 'package:ecommerce_mobile/global/widgets/small_product_card.dart';
-import 'package:ecommerce_mobile/model/product_model.dart';
 import 'package:ecommerce_mobile/pages/detail_page/detail_page_view.dart';
 import 'package:ecommerce_mobile/utils/thames.dart';
 import 'package:flutter/material.dart';

@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:ecommerce_mobile/model/product_model.dart';
 import 'package:ecommerce_mobile/pages/detail_page/components/detail_page_app_bar.dart';
 import 'package:ecommerce_mobile/pages/detail_page/components/detail_page_componentone.dart';

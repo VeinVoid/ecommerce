@@ -34,6 +34,7 @@ class HomePage extends StatelessWidget {
                 categoryLenght: homePageController.categories.length,
                 categoryName: homePageController.categories.map((category) => category.categoryName).toList(),
                 categoryIcon: homePageController.categories.map((category) => base64.decode(category.categoryIcon)).toList(),
+                categoryModel: homePageController.categories,
               )),
               SizedBox(height: height * 0.02),
               Obx(() => HomePageMostPopuler(
@@ -42,6 +43,7 @@ class HomePage extends StatelessWidget {
                 productDesc: homePageController.products.map((product) => product.productDescription).toList(), 
                 productPrice: homePageController.products.map((product) => product.productPrice).toList(), 
                 productImage: homePageController.products.map((product) => base64.decode(product.productImage)).toList(),
+                productModel: homePageController.products,
               )),
               SizedBox(height: height * 0.02),
               Obx(() => HomePageRecomended(

@@ -3,7 +3,12 @@ import 'package:ecommerce_mobile/utils/thames.dart';
 import 'package:flutter/material.dart';
 
 class CategoryPageProduct extends StatelessWidget {
-  const CategoryPageProduct({super.key});
+  const CategoryPageProduct({
+    super.key,
+    required this.categoryName
+    });
+
+    final String categoryName;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,7 @@ class CategoryPageProduct extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Electronic",
+          categoryName,
           style: tsParaghraph20(fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10),

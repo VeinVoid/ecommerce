@@ -1,7 +1,9 @@
 import 'dart:typed_data';
 import 'package:ecommerce_mobile/global/widgets/vertical_product_card.dart';
+import 'package:ecommerce_mobile/pages/detail_page/detail_page_view.dart';
 import 'package:ecommerce_mobile/utils/thames.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePageMostPopuler extends StatelessWidget {
   const HomePageMostPopuler({
@@ -11,6 +13,7 @@ class HomePageMostPopuler extends StatelessWidget {
     required this.productDesc,
     required this.productPrice,
     required this.productImage,
+    required this.productModel
     });
 
     final int productLenght;
@@ -18,6 +21,7 @@ class HomePageMostPopuler extends StatelessWidget {
     final List<String> productDesc;
     final List<int> productPrice;
     final List<Uint8List> productImage;
+    final List productModel;
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +60,10 @@ class HomePageMostPopuler extends StatelessWidget {
                 productName: productName[index],
                 productDescription: productDesc[index],
                 productPrice: productPrice[index],
-                productImage: productImage[index]
+                productImage: productImage[index],
+                onTap: () {
+                  Get.to(() => DetailPage(productModel: productModel[index]));
+                },
               );
             },
           )

@@ -1,7 +1,9 @@
 import 'dart:typed_data';
 import 'package:ecommerce_mobile/global/widgets/category_card.dart';
+import 'package:ecommerce_mobile/pages/category_page/category_page_view.dart';
 import 'package:ecommerce_mobile/utils/thames.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePageCategory extends StatelessWidget {
   const HomePageCategory({
@@ -9,11 +11,13 @@ class HomePageCategory extends StatelessWidget {
     required this.categoryLenght,
     required this.categoryName,
     required this.categoryIcon,
+    required this.categoryModel
     });
 
     final int categoryLenght;
     final List<String> categoryName;
     final List<Uint8List> categoryIcon;
+    final List categoryModel;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +45,10 @@ class HomePageCategory extends StatelessWidget {
                 width: width * 0.31, 
                 height: height * 0.2, 
                 categoryName: categoryName[index], 
-                imageBytes: categoryIcon[index]
+                imageBytes: categoryIcon[index],
+                onTap: () {
+                  Get.to(() => CategoryPage(categoryModel: categoryModel[index]));
+                },
               );
             },
           )

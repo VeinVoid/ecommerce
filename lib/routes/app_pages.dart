@@ -41,12 +41,6 @@ class AppPages{
       transition: Transition.noTransition
     ),
     GetPage(
-      name: Path.CATEGORY_PAGE, 
-      page: () => CategoryPage(),
-      binding: CategoryPageBinding(),
-      transition: Transition.noTransition
-    ),
-    GetPage(
       name: Path.MOSTPOPULER_PAGE, 
       page: () => MostPopulerPage(),
       binding: MostPopulerPageBinding(),

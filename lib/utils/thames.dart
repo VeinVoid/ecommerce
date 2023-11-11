@@ -14,9 +14,9 @@ const Color generalColorDark = Color.fromARGB(255, 23, 23, 23);
 
 //BackDrop
 BoxShadow primaryBackDrop() => BoxShadow(
-  color: primeryColorMedium.withOpacity(0.1),
+  color: primeryColorDark.withOpacity(0.15),
   offset: Offset(0, 0),
-  blurRadius: 20,
+  blurRadius: 10,
 );
 
 BoxShadow generalBackDrop() =>  BoxShadow(
@@ -59,9 +59,10 @@ TextStyle tsParaghraph16({
 
 TextStyle tsParaghraph14({ 
   FontWeight? fontWeight,
+  bool isBlue = false
  }) => GoogleFonts.poppins(
   textStyle: TextStyle(
-    color: generalColorDark,
+    color: isBlue ? primeryColorMedium : generalColorDark,
     fontWeight: fontWeight,
     fontSize: 14
   )
@@ -69,6 +70,7 @@ TextStyle tsParaghraph14({
 
 TextStyle tsParaghraph12({ 
   FontWeight? fontWeight,
+  
  }) => GoogleFonts.poppins(
   textStyle: TextStyle(
     color: generalColorDark,
@@ -96,4 +98,6 @@ String onBoarding3 = "assets/images/image_onboarding3.svg";
 String back = "assets/icons/icon_back.svg";
 String cart = "assets/icons/icon_cart.svg";
 String addCartHorizontal = "assets/icons/icon_addcart_horizontal.svg";
+String addCartVertical = "assets/icons/icon_addcart_vertical.svg";
 String rate = "assets/icons/icon_rate.svg";
+String test = "assets/images/00027-2078024940.png";

@@ -17,7 +17,7 @@ class HomePageController extends GetxController{
     fetchProducts();
   }
 
-  Future<void> fetchCategories() async {
+  void fetchCategories() async {
     try {
       List<Category> fetchedCategories = await categoryService.getCategory();
 
@@ -27,7 +27,7 @@ class HomePageController extends GetxController{
     }
   }
 
-  Future<void> fetchProducts() async {
+  void fetchProducts() async {
     try {
       List<Product> fetchedProducts = await productService.getProduct();
 

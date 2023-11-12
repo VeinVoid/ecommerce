@@ -42,9 +42,13 @@ Widget horizontalProductCard({
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      productName,
-                      style: tsParaghraph16(fontWeight: FontWeight.w700)
+                    Container(
+                      width: width * 0.3,
+                      child: Text(
+                        productName,
+                        overflow: TextOverflow.ellipsis,
+                        style: tsParaghraph16(fontWeight: FontWeight.w700)
+                      ),
                     ),
                     Row(
                       children: [

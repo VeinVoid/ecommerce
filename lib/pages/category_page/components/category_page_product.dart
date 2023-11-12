@@ -46,7 +46,7 @@ class CategoryPageProduct extends StatelessWidget {
             itemBuilder: (context, index) {
               return horizontalProductCard(
                 width: width, 
-                height: width * 0.3, 
+                height: height * 0.15, 
                 productName: productName[index], 
                 productImage: productImage[index], 
                 productRate: 3.6, 

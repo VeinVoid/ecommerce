@@ -38,9 +38,19 @@ class HomePageMostPopuler extends StatelessWidget {
               "Most Populer",
               style: tsParaghraph20(fontWeight: FontWeight.bold),
             ),
-            Text(
-              "See All",
-              style: tsParaghraph16(fontWeight: FontWeight.bold, isBlue: true),
+            GestureDetector(
+              onTap: () {
+                Get.toNamed(
+                  '/mostpopuler', 
+                  arguments: {
+                    'productModel' : productModel,
+                  },
+                );
+              },
+              child: Text(
+                "See All",
+                style: tsParaghraph16(fontWeight: FontWeight.bold, isBlue: true),
+              ),
             )
           ],
         ),

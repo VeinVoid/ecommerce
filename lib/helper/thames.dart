@@ -44,7 +44,8 @@ TextStyle tsParaghraph16({
 );
 
 TextStyle tsParaghraph12({ 
-  FontWeight? fontWeight
+  FontWeight? fontWeight,
+  bool? isBlue
  }) => GoogleFonts.poppins(
   textStyle: TextStyle(
     color: generalColorDark,

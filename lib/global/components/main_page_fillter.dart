@@ -15,12 +15,8 @@ class FilterMainPage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          priceFilter(
-            width: width * 0.1, 
-            height: width * 0.1
-          ),
           searchField(
-            width: width * 0.7,
+            width: width * 0.9,
             height: height * 0.1,
             hintText: 'Search Product'
           )

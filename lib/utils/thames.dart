@@ -94,13 +94,23 @@ String onBoarding1 = "assets/images/image_onboarding1.svg";
 String onBoarding2 = "assets/images/image_onboarding2.svg";
 String onBoarding3 = "assets/images/image_onboarding3.svg";
 
+//Asset Random Shape
+String randomShape1 = "assets/images/rs-1.png";
+String randomShape2 = "assets/images/rs-2.png";
+String randomShape3 = "assets/images/rs-3.png";
+String randomShape4 = "assets/images/rs-4.png";
+
 //Asset Icon
 String back = "assets/icons/icon_back.svg";
+String next = "assets/icons/icon_next.svg";
 String cart = "assets/icons/icon_cart.svg";
 String addCartHorizontal = "assets/icons/icon_addcart_horizontal.svg";
-String addCartVertical = "assets/icons/icon_addcart_vertical.svg";
-String addCartButton = "assets/icons/icon_addcart_button.svg";
 String rate = "assets/icons/icon_rate.svg";
 String plus = "assets/icons/icon_plus.svg";
 String minus = "assets/icons/icon_minus.svg";
+String facebook = "assets/icons/icon_facebook.svg";
+String google = "assets/icons/icon_google.svg";
+String twitter = "assets/icons/icon_twitter.svg";
+String addCartVertical = "assets/icons/icon_addcart_vertical.svg";
+String addCartButton = "assets/icons/icon_addcart_button.svg";
 String test = "assets/images/00027-2078024940.png";

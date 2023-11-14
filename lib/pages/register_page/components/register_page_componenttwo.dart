@@ -16,28 +16,28 @@ class RegisterPageComponentTwo extends StatelessWidget {
           width: width * 0.8, 
           height: height * 0.06, 
           hintText: "Username", 
-          icon: Icons.person
+          icon: Icons.person,
         ),
         SizedBox(height: height * 0.05),
         textFormLogin(
           width: width * 0.8, 
           height: height * 0.06, 
           hintText: "Password", 
-          icon: Icons.lock
+          icon: Icons.lock,
         ),
         SizedBox(height: height * 0.05),
         textFormLogin(
           width: width * 0.8, 
           height: height * 0.06, 
           hintText: "Email", 
-          icon: Icons.mail
+          icon: Icons.mail,
         ),
         SizedBox(height: height * 0.05),
         textFormLogin(
           width: width * 0.8, 
           height: height * 0.06, 
           hintText: "Mobile", 
-          icon: Icons.phone
+          icon: Icons.phone,
         )
       ],
     );

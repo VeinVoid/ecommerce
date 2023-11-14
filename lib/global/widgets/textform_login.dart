@@ -5,7 +5,8 @@ Widget textFormLogin({
   required double width,
   required double height,
   required String hintText,
-  required IconData icon
+  required IconData icon,
+  TextEditingController? controller
   }){
   return Container(
     width: width,
@@ -21,6 +22,7 @@ Widget textFormLogin({
       style: tsParaghraph14(
         fontWeight: FontWeight.w500
       ),
+      controller: controller,
       decoration: InputDecoration(
         hintText: hintText,
         contentPadding: EdgeInsets.symmetric(horizontal: 12.0),

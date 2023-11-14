@@ -5,8 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../login_page/component/login-screen.dart';
-import '../../login_page/component/register-screen.dart';
+
 
 
 class WelcomeScreen extends StatelessWidget {

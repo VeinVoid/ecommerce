@@ -1,9 +1,11 @@
+
 import 'package:ecommerce_mobile/pages/login_page/login_page_view.dart';
 import 'package:ecommerce_mobile/pages/register_page/register_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 
 
 class WelcomeScreen extends StatelessWidget {

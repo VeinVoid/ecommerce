@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:ecommerce_mobile/model/user_model.dart';
 import 'package:ecommerce_mobile/utils/constants.dart';
+import 'package:get/get_connect/http/src/response/response.dart';
 
 class UserService {
   final Dio dio = Dio();

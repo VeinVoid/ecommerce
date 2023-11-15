@@ -1,5 +1,7 @@
 import 'package:ecommerce_mobile/pages/boarding_page/boarding_page_binding.dart';
 import 'package:ecommerce_mobile/pages/boarding_page/boarding_page_view.dart';
+import 'package:ecommerce_mobile/pages/cart_page/cart_page_binding.dart';
+import 'package:ecommerce_mobile/pages/cart_page/cart_page_view.dart';
 import 'package:ecommerce_mobile/pages/category_page/category_page_binding.dart';
 import 'package:ecommerce_mobile/pages/category_page/category_page_view.dart';
 import 'package:ecommerce_mobile/pages/home_page/home_page_binding.dart';
@@ -68,6 +70,12 @@ class AppPages{
       name: Path.SETTING_PAGE, 
       page: () => SettingPage(),
       binding: SettingPageBinding(),
+      transition: Transition.noTransition
+    ),
+    GetPage(
+      name: Path.SETTING_PAGE, 
+      page: () => CartPage(),
+      binding: CartPageBinding(),
       transition: Transition.noTransition
     ),
   ];

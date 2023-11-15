@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class RegisterPageComponentThree extends StatelessWidget {
-  const RegisterPageComponentThree({super.key});
+  const RegisterPageComponentThree({
+    super.key,
+    required this.onTap,
+    });
+
+    final Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +27,11 @@ class RegisterPageComponentThree extends StatelessWidget {
               style: tsParaghraph20(fontWeight: FontWeight.bold),
             ),
             SizedBox(width: width * 0.05),
-            SvgPicture.asset(
-              next
+            GestureDetector(
+              onTap: onTap,
+              child: SvgPicture.asset(
+                next
+              ),
             )
           ],
         ),

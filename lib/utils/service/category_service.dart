@@ -6,7 +6,7 @@ import 'package:ecommerce_mobile/utils/constants.dart';
 class CategoryService{
   final Dio dio = Dio();
 
-  Future<List<Category>> getCategory() async{
+  getCategory() async{
     try {
       Response response = await dio.get(baseUrl+categoryEndpoint);
       Map<String, dynamic> responseData = response.data;

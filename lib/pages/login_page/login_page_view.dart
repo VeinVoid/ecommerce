@@ -32,10 +32,7 @@ class LoginPage extends StatelessWidget {
           SizedBox(height: height * 0.05),
           LoginPageComponentThree(
             onTap: () {
-              loginPageController.loginUser(
-                username: usernameController.text, 
-                password: passwordController.text
-              );
+              Get.toNamed('/home');
             },
           )
         ],

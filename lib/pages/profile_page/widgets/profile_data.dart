@@ -17,11 +17,11 @@ Widget profileData({
           children: [
             Text(
               wishlist.toString(),
-              style: tsParaghraph16(fontWeight: FontWeight.w600),
+              style: tsParaghraph16White(fontWeight: FontWeight.w600),
             ),
             Text(
               "Wishlist",
-              style: tsParaghraph16(fontWeight: FontWeight.w600),
+              style: tsParaghraph16White(fontWeight: FontWeight.w600),
             )
           ],
         ),
@@ -33,11 +33,11 @@ Widget profileData({
           children: [
             Text(
               "Rp $wallet",
-              style: tsParaghraph16(fontWeight: FontWeight.w600),
+              style: tsParaghraph16White(fontWeight: FontWeight.w600),
             ),
             Text(
               "Wallet",
-              style: tsParaghraph16(fontWeight: FontWeight.w600),
+              style: tsParaghraph16White(fontWeight: FontWeight.w600),
             )
           ],
         ),
@@ -49,11 +49,11 @@ Widget profileData({
           children: [
             Text(
               point.toString(),
-              style: tsParaghraph16(fontWeight: FontWeight.w600),
+              style: tsParaghraph16White(fontWeight: FontWeight.w600),
             ),
             Text(
               "Point",
-              style: tsParaghraph16(fontWeight: FontWeight.w600),
+              style: tsParaghraph16White(fontWeight: FontWeight.w600),
             )
           ],
         ),

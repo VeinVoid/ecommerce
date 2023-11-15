@@ -46,6 +46,16 @@ TextStyle tsParaghraph20 ({
   )
 );
 
+TextStyle tsParaghraph20White({ 
+  FontWeight? fontWeight
+ }) => GoogleFonts.poppins(
+  textStyle: TextStyle(
+    color: generalColorWhite,
+    fontWeight: fontWeight,
+    fontSize: 20
+  )
+);
+
 TextStyle tsParaghraph16({ 
   FontWeight? fontWeight,
   bool isBlue = false
@@ -57,12 +67,43 @@ TextStyle tsParaghraph16({
   )
 );
 
-TextStyle tsParaghraph14({ 
+TextStyle tsParaghraph16Red({ 
   FontWeight? fontWeight,
   bool isBlue = false
  }) => GoogleFonts.poppins(
   textStyle: TextStyle(
+    color: Colors.red,
+    fontWeight: fontWeight,
+    fontSize: 16
+  )
+);
+
+TextStyle tsParaghraph16White({ 
+  FontWeight? fontWeight,
+ }) => GoogleFonts.poppins(
+  textStyle: TextStyle(
+    color: generalColorWhite,
+    fontWeight: fontWeight,
+    fontSize: 16
+  )
+);
+
+TextStyle tsParaghraph14({ 
+  FontWeight? fontWeight,
+  bool isBlue = false,
+ }) => GoogleFonts.poppins(
+  textStyle: TextStyle(
     color: isBlue ? primeryColorMedium : generalColorDark,
+    fontWeight: fontWeight,
+    fontSize: 14
+  )
+);
+
+TextStyle tsParaghraph14White({ 
+  FontWeight? fontWeight,
+ }) => GoogleFonts.poppins(
+  textStyle: TextStyle(
+    color: generalColorWhite,
     fontWeight: fontWeight,
     fontSize: 14
   )

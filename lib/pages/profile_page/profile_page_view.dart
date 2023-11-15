@@ -39,7 +39,7 @@ class ProfilePage extends StatelessWidget {
           } else if (index == 1) {
             Get.toNamed('/profile');
           } else if (index == 2) {
-            Get.toNamed('/profile');
+            Get.toNamed('/setting');
           }
         },
       ),

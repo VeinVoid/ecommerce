@@ -1,4 +1,5 @@
 import 'package:ecommerce_mobile/pages/profile_page/components/profile_page_componentone.dart';
+import 'package:ecommerce_mobile/pages/profile_page/components/profile_page_componentwo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,14 +8,20 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    double width = MediaQuery.sizeOf(context).width;
+    double height= MediaQuery.sizeOf(context).height;
+
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 0,
-      ),
-      body: Column(
-        children: [
-          ComponentOne()
-        ],
+      body: Container(
+        margin: EdgeInsets.only(top: height * 0.05),
+        child: Column(
+          children: [
+            ComponentOne(),
+            SizedBox(height: height * 0.2),
+            ComponentTwo()
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [

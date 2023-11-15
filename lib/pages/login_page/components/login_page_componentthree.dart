@@ -1,6 +1,7 @@
 import 'package:ecommerce_mobile/utils/thames.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class LoginPageComponentThree extends StatelessWidget {
   const LoginPageComponentThree({
@@ -50,18 +51,26 @@ class LoginPageComponentThree extends StatelessWidget {
           ],
         ),
         SizedBox(height: height * 0.05),
-        Text.rich(
-          TextSpan(
-            children: [
-              TextSpan(
-                text: 'Don’t have an account? ',
-                style: tsParaghraph16(fontWeight: FontWeight.w500)
-              ),
-              TextSpan(
-                text: 'SignUp',
-                style: tsParaghraph16(fontWeight: FontWeight.bold)
-              ),
-            ],
+        GestureDetector(
+          onTap: () {
+            Get.toNamed('/register');
+          },
+          child: Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(
+                  text: 'Don’t have an account? ',
+                  style: tsParaghraph16(fontWeight: FontWeight.w500)
+                ),
+                TextSpan(
+                  text: 'SignUp',
+                  style: tsParaghraph16(fontWeight: FontWeight.bold),
+                  onEnter: (event) {
+                    Get.toNamed('/register');
+                  },
+                ),
+              ],
+            ),
           ),
         )
 

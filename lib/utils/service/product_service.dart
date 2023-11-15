@@ -6,7 +6,7 @@ import 'package:ecommerce_mobile/utils/constants.dart';
 class ProductService{
   final Dio dio = Dio();
 
-  Future<List<Product>> getProduct() async{
+  getProduct() async{
     try {
       Response response = await dio.get(baseUrl+productEndpoint);
       Map<String, dynamic> responseData = response.data;

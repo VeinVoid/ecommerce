@@ -5,8 +5,10 @@ import 'package:ecommerce_mobile/pages/home_page/components/home_page_category.d
 import 'package:ecommerce_mobile/pages/home_page/components/home_page_mostPopuler.dart';
 import 'package:ecommerce_mobile/pages/home_page/components/home_page_recomended.dart';
 import 'package:ecommerce_mobile/pages/home_page/home_page_controller.dart';
+import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -57,6 +59,33 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Setting',
+          ),
+        ],
+        currentIndex: 0,
+        selectedItemColor: Colors.blue,
+        onTap: (index) {
+          if (index == 0) {
+            Get.toNamed('/home');
+          } else if (index == 1) {
+            Get.toNamed('/profile');
+          } else if (index == 2) {
+            Get.toNamed('/profile');
+          }
+        },
       ),
     );
   }

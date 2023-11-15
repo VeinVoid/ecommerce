@@ -10,6 +10,8 @@ import 'package:ecommerce_mobile/pages/most_populet_page/most_populer_page_bindi
 import 'package:ecommerce_mobile/pages/most_populet_page/most_populer_page_view.dart';
 import 'package:ecommerce_mobile/pages/profile_page/profile_page_binding.dart';
 import 'package:ecommerce_mobile/pages/profile_page/profile_page_view.dart';
+import 'package:ecommerce_mobile/pages/register_page/register_page_binding.dart';
+import 'package:ecommerce_mobile/pages/register_page/register_page_view.dart';
 import 'package:ecommerce_mobile/pages/setting_page/setting_page_binding.dart';
 import 'package:ecommerce_mobile/pages/setting_page/setting_page_view.dart';
 import 'package:ecommerce_mobile/routes/app_routes.dart';
@@ -30,6 +32,12 @@ class AppPages{
       name: Path.LOGIN_PAGE, 
       page: () => LoginPage(),
       binding: LoginPageBinding(),
+      transition: Transition.noTransition
+    ),
+    GetPage(
+      name: Path.REGISTER_PAGE, 
+      page: () => RegisterPage(),
+      binding: RegisterPageBinding(),
       transition: Transition.noTransition
     ),
     GetPage(

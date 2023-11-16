@@ -73,7 +73,7 @@ class AppPages{
       transition: Transition.noTransition
     ),
     GetPage(
-      name: Path.SETTING_PAGE, 
+      name: Path.CART_PAGE, 
       page: () => CartPage(),
       binding: CartPageBinding(),
       transition: Transition.noTransition

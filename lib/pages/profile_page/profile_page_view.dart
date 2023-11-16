@@ -14,11 +14,10 @@ class ProfilePage extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(top: height * 0.05),
         child: Column(
           children: [
             ComponentOne(),
-            SizedBox(height: height * 0.2),
+            SizedBox(height: height * 0.05),
             ComponentTwo()
           ],
         ),

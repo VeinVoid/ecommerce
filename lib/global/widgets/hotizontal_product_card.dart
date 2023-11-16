@@ -16,7 +16,7 @@ Widget horizontalProductCard({
   return GestureDetector(
     onTap: onTap,
     child: Container(
-      margin: EdgeInsets.symmetric(vertical: height * 0.08),
+      margin: EdgeInsets.symmetric(vertical: height * 0.08, horizontal: width * 0.02),
       width: width,
       height: height,
       decoration: BoxDecoration(

@@ -15,19 +15,22 @@ class ComponentOne extends StatelessWidget {
       width: width,
       height: height * 0.3,
       decoration: BoxDecoration(color: Color(0xFF1F68BE)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          profileName(
-            name: "Acreus"
-          ),
-          profileData(
-            wishlist: 2, 
-            wallet: 200000, 
-            point: 4, 
-            height: height
-          )
-        ],
+      child: Container(
+        margin: EdgeInsets.only(top: height * 0.05),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            profileName(
+              name: "Acreus"
+            ),
+            profileData(
+              wishlist: 2, 
+              wallet: 200000, 
+              point: 4, 
+              height: height
+            )
+          ],
+        ),
       ),
     );
   }

@@ -22,7 +22,7 @@ Widget profileCardMenu({
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: width * 0.1),
+              margin: EdgeInsets.only(left: width * 0.12, right: width * 0.12, top: height * 0.07),
               child: Text(
                 "My Order",
                 style: tsParaghraph16(fontWeight: FontWeight.bold),
@@ -30,7 +30,7 @@ Widget profileCardMenu({
             ),
             Center(
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: width * 0.1),
+                margin: EdgeInsets.symmetric(horizontal: width * 0.08),
                 width: width * 0.95,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
@@ -44,7 +44,7 @@ Widget profileCardMenu({
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: width * 0.1),
+              margin: EdgeInsets.symmetric(horizontal: width * 0.12),
               child: Text(
                 "My Favourite",
                 style: tsParaghraph16(fontWeight: FontWeight.bold),
@@ -52,7 +52,7 @@ Widget profileCardMenu({
             ),
             Center(
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: width * 0.1),
+                margin: EdgeInsets.symmetric(horizontal: width * 0.08),
                 width: width * 0.95,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
@@ -66,7 +66,7 @@ Widget profileCardMenu({
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: width * 0.1),
+              margin: EdgeInsets.symmetric(horizontal: width * 0.12),
               child: Text(
                 "My Address",
                 style: tsParaghraph16(fontWeight: FontWeight.bold),
@@ -74,6 +74,7 @@ Widget profileCardMenu({
             ),
             Center(
               child: Container(
+                margin: EdgeInsets.symmetric(horizontal: width * 0.08),
                 width: width * 0.95,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
@@ -87,7 +88,7 @@ Widget profileCardMenu({
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: width * 0.1),
+              margin: EdgeInsets.symmetric(horizontal: width * 0.12),
               child: Text(
                 "My Account",
                 style: tsParaghraph16(fontWeight: FontWeight.bold),
@@ -95,6 +96,7 @@ Widget profileCardMenu({
             ),
             Center(
               child: Container(
+                margin: EdgeInsets.symmetric(horizontal: width * 0.08),
                 width: width * 0.95,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
@@ -108,10 +110,10 @@ Widget profileCardMenu({
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: width * 0.1),
+              margin: EdgeInsets.only(left: width * 0.12, right: width * 0.12, bottom: height * 0.07),
               child: Text(
                 "Log Out",
-                style: tsParaghraph16(fontWeight: FontWeight.bold),
+                style: tsParaghraph16Red(fontWeight: FontWeight.bold),
               ),
             )
           ],

@@ -111,7 +111,7 @@ TextStyle tsParaghraph14White({
 
 TextStyle tsParaghraph12({ 
   FontWeight? fontWeight,
-  
+
  }) => GoogleFonts.poppins(
   textStyle: TextStyle(
     color: generalColorDark,
@@ -152,6 +152,8 @@ String minus = "assets/icons/icon_minus.svg";
 String facebook = "assets/icons/icon_facebook.svg";
 String google = "assets/icons/icon_google.svg";
 String twitter = "assets/icons/icon_twitter.svg";
+String trash = "assets/icons/icon_trash.svg";
 String addCartVertical = "assets/icons/icon_addcart_vertical.svg";
 String addCartButton = "assets/icons/icon_addcart_button.svg";
+String buy = "assets/icons/icon_buy_button.svg";
 String test = "assets/images/00027-2078024940.png";

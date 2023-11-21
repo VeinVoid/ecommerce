@@ -52,9 +52,15 @@ class CategoryPageProduct extends StatelessWidget {
                 productRate: 3.6, 
                 productSelled: 200, 
                 productPrice: productPrice[index],
-                onTap: () {
-                  Get.to(() => DetailPage(productModel: productModel[index]));
+                onTapDetail: () {
+                  Get.toNamed(
+                    '/detail', 
+                    arguments: productModel[index]
+                  );
                 },
+                onTapCart: () {
+                  print("p");
+                }
               );
             },
           )

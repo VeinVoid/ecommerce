@@ -11,26 +11,27 @@ Widget verticalProductCard({
   required String productDescription,
   required int productPrice,
   required Uint8List productImage,
-  required Function() onTap
+  required Function() onTapDetail,
+  required Function() onTapCart
   }){
-  return GestureDetector(
-    onTap: onTap,
-    child: Container(
-      margin: EdgeInsets.symmetric(horizontal: width * 0.08, vertical: height * 0.05),
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
-        color: generalColorWhite,
-        borderRadius: BorderRadius.circular(5),
-        boxShadow: [
-          primaryBackDrop()
-        ]
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
+  return Container(
+    margin: EdgeInsets.symmetric(horizontal: width * 0.08, vertical: height * 0.05),
+    width: width,
+    height: height,
+    decoration: BoxDecoration(
+      color: generalColorWhite,
+      borderRadius: BorderRadius.circular(5),
+      boxShadow: [
+        primaryBackDrop()
+      ]
+    ),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        GestureDetector(
+          onTap: onTapDetail,
+          child: Container(
             width: width,
             height: height * 0.55,
             margin: EdgeInsets.all(margin),
@@ -41,7 +42,10 @@ Widget verticalProductCard({
               )
             ),
           ),
-          Container(
+        ),
+        GestureDetector(
+          onTap: onTapDetail,
+          child: Container(
             margin: EdgeInsets.symmetric(horizontal: margin),
             child: Text(
               productName,
@@ -50,7 +54,10 @@ Widget verticalProductCard({
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          Container(
+        ),
+        GestureDetector(
+          onTap: onTapDetail,
+          child: Container(
             margin: EdgeInsets.symmetric(horizontal: margin),
             child: Text(
               productDescription,
@@ -59,7 +66,10 @@ Widget verticalProductCard({
               style: tsParaghraph10(fontWeight: FontWeight.w600),
             ),
           ),
-          Row(
+        ),
+        GestureDetector(
+          onTap: onTapCart,
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
@@ -77,9 +87,9 @@ Widget verticalProductCard({
                 ),
               )
             ],
-          )
-        ],
-      ),
+          ),
+        )
+      ],
     ),
   );
 }

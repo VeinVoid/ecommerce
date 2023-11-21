@@ -9,6 +9,7 @@ class HomePageController extends GetxController{
   final ProductService productService = ProductService();
   RxList<Category> categories = <Category>[].obs;
   RxList<Product> products = <Product>[].obs;
+  bool isBuffer = true;
 
   @override
   void onInit() {
@@ -30,8 +31,10 @@ class HomePageController extends GetxController{
   void fetchProducts() async {
     try {
       List<Product> fetchedProducts = await productService.getProduct();
-
+      
       products.assignAll(fetchedProducts);
+
+      isBuffer = false;
     } catch (error) {
       print("Error fetching categories: $error");
     }

@@ -1,4 +1,3 @@
-import 'package:ecommerce_mobile/pages/login_page/login_page_controller.dart';
 import 'package:ecommerce_mobile/pages/register_page/components/register_page.componentthree.dart';
 import 'package:ecommerce_mobile/pages/register_page/components/register_page_componentone.dart';
 import 'package:ecommerce_mobile/pages/register_page/components/register_page_componenttwo.dart';
@@ -24,23 +23,30 @@ class RegisterPage extends StatelessWidget {
     final TextEditingController phoneNumberController = TextEditingController();
 
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          RegisterPageComponentOne(),
-          SizedBox(height: height * 0.05),
-          RegisterPageComponentTwo(
-            usernameController: usernameController,
-            emailController: emailController,
-            passwordController: passwordController,
-            phoneNumberController: phoneNumberController,
-          ),
-          RegisterPageComponentThree(
-            onTap: () {
-              Get.toNamed('/home');
-            },
-          )
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            RegisterPageComponentOne(),
+            SizedBox(height: height * 0.05),
+            RegisterPageComponentTwo(
+              usernameController: usernameController,
+              emailController: emailController,
+              passwordController: passwordController,
+              phoneNumberController: phoneNumberController,
+            ),
+            RegisterPageComponentThree(
+              onTap: () {
+                registerPageController.registerUser(
+                  usernameController.text, 
+                  emailController.text, 
+                  passwordController.text, 
+                  int.parse(phoneNumberController.text)
+                );
+              },
+            )
+          ],
+        ),
       ),
     );
   }

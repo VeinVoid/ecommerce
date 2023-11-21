@@ -10,25 +10,26 @@ Widget smallProductCard({
   required String productName,
   required int productPrice,
   required Uint8List productImage,
-  required Function() onTap,
+  required Function() onTapDetail,
+  required Function() onTapCart
   }){
-  return GestureDetector(
-    onTap: onTap,
-    child: Container(
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
-        color: generalColorWhite,
-        borderRadius: BorderRadius.circular(5),
-        boxShadow: [
-          primaryBackDrop()
-        ]
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
+  return Container(
+    width: width,
+    height: height,
+    decoration: BoxDecoration(
+      color: generalColorWhite,
+      borderRadius: BorderRadius.circular(5),
+      boxShadow: [
+        primaryBackDrop()
+      ]
+    ),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        GestureDetector(
+          onTap: onTapDetail,
+          child: Container(
             width: width * 0.5,
             height: height * 0.1,
             margin: EdgeInsets.all(margin),
@@ -41,7 +42,10 @@ Widget smallProductCard({
               )
             ),
           ),
-          Container(
+        ),
+        GestureDetector(
+          onTap: onTapDetail,
+          child: Container(
             margin: EdgeInsets.symmetric(horizontal: margin),
             child: Text(
               productName,
@@ -50,27 +54,33 @@ Widget smallProductCard({
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            GestureDetector(
+              onTap: onTapDetail,
+              child: Container(
                 margin: EdgeInsets.symmetric(horizontal: margin),
                 child: Text(
                   "Rp $productPrice",
                   style: tsParaghraph14(fontWeight: FontWeight.bold, isBlue: true),
                 ),
               ),
-              Align(
+            ),
+            GestureDetector(
+              onTap: onTapCart,
+              child: Align(
                 alignment: Alignment.bottomRight,
                 child: SvgPicture.asset(
                   addCartVertical,
                   width: width * 0.08,
                 ),
-              )
-            ],
-          )
-        ],
-      ),
+              ),
+            )
+          ],
+        )
+      ],
     ),
   );
 }

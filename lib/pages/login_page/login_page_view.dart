@@ -21,21 +21,26 @@ class LoginPage extends StatelessWidget {
     final TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
-      body: Column(
-        children: [
-          LoginPageComponentOne(),
-          SizedBox(height: height * 0.1),
-          LoginPageComponentTwo(
-            usernameController: usernameController,
-            passwordController: passwordController,
-          ),
-          SizedBox(height: height * 0.05),
-          LoginPageComponentThree(
-            onTap: () {
-              Get.toNamed('/home');
-            },
-          )
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            LoginPageComponentOne(),
+            SizedBox(height: height * 0.1),
+            LoginPageComponentTwo(
+              usernameController: usernameController,
+              passwordController: passwordController,
+            ),
+            SizedBox(height: height * 0.05),
+            LoginPageComponentThree(
+              onTap: () {
+                loginPageController.loginUser(
+                  usernameController.text, 
+                  passwordController.text
+                );
+              },
+            )
+          ],
+        ),
       ),
     );
   }

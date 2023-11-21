@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:typed_data';
 import 'package:ecommerce_mobile/pages/detail_page/widgets/quantity_widget.dart';
 import 'package:ecommerce_mobile/pages/detail_page/widgets/review_widget.dart';
@@ -9,14 +10,20 @@ class DetailPageComponentOne extends StatelessWidget {
     super.key,
     required this.productName,
     required this.productPrice,
-    required this.productSalled,
-    required this.productImage
+    // required this.productSalled,
+    required this.productImage,
+    // required this.quantits,
+    // required this.add,
+    // required this.minus
   });
 
   final String productName;
   final int productPrice;
-  final int productSalled;
+  // final int productSalled;
   final Uint8List productImage;
+  // final int quantits;
+  // final Function() add;
+  // final Function() minus;
 
   @override
   Widget build(BuildContext context) {
@@ -46,33 +53,6 @@ class DetailPageComponentOne extends StatelessWidget {
           style: tsParaghraph16(fontWeight: FontWeight.w600, isBlue: true),
         ),
         SizedBox(height: height * 0.01),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            review(
-              width: width * 0.07,
-              height: height * 0.01,
-              salled: productSalled
-            ),
-            quantity(
-              width: width * 0.08,
-              height: height * 0.01
-            )
-          ],
-        ),
-        SizedBox(height: height * 0.02),
-        Container(
-          width: width,
-            decoration: ShapeDecoration(
-              shape: RoundedRectangleBorder(
-                side: BorderSide(
-                  width: 1.50,
-                  strokeAlign: BorderSide.strokeAlignCenter,
-                color: Color(0xFFE0E0E0),
-              ),
-            ),
-          ),
-        )
       ],
     );
   }

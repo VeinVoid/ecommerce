@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+import 'package:ecommerce_mobile/global/controllers/global_card_controller.dart';
 import 'package:ecommerce_mobile/global/widgets/vertical_product_card.dart';
 import 'package:ecommerce_mobile/pages/detail_page/detail_page_view.dart';
 import 'package:ecommerce_mobile/utils/thames.dart';
@@ -28,6 +29,8 @@ class HomePageMostPopuler extends StatelessWidget {
 
     double width = MediaQuery.sizeOf(context).width;
     double height= MediaQuery.sizeOf(context).height;
+
+    final GlobalController globalController = Get.put(GlobalController());
 
     return Column(
       children: [
@@ -71,8 +74,14 @@ class HomePageMostPopuler extends StatelessWidget {
                 productDescription: productDesc[index],
                 productPrice: productPrice[index],
                 productImage: productImage[index],
-                onTap: () {
-                  Get.to(() => DetailPage(productModel: productModel[index]));
+                onTapDetail: () {
+                  Get.toNamed(
+                    '/detail', 
+                    arguments: productModel[index]
+                  );
+                },
+                onTapCart: () {
+                  globalController.addToCart(productModel[index]);
                 },
               );
             },

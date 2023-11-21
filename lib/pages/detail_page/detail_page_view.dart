@@ -1,21 +1,24 @@
 import 'dart:convert';
-import 'package:ecommerce_mobile/model/product_model.dart';
 import 'package:ecommerce_mobile/pages/detail_page/components/detail_page_app_bar.dart';
 import 'package:ecommerce_mobile/pages/detail_page/components/detail_page_componentone.dart';
 import 'package:ecommerce_mobile/pages/detail_page/components/detail_page_componentthree.dart';
 import 'package:ecommerce_mobile/pages/detail_page/components/detail_page_componenttwo.dart';
+import 'package:ecommerce_mobile/pages/detail_page/detail_page_controller.dart';
+import 'package:ecommerce_mobile/pages/detail_page/widgets/quantity_widget.dart';
+import 'package:ecommerce_mobile/pages/detail_page/widgets/review_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({
     super.key,
-    required this.productModel
     });
-
-    final Product productModel;
 
   @override
   Widget build(BuildContext context) {
+
+    final DetailPageController detailPageController = Get.find<DetailPageController>();
+    detailPageController.onInit();
 
     double width = MediaQuery.sizeOf(context).width;
     double height= MediaQuery.sizeOf(context).height;
@@ -31,15 +34,51 @@ class DetailPage extends StatelessWidget {
                 DetailPageAppBar(),
                 SizedBox(height: height * 0.02),
                 DetailPageComponentOne(
-                  productName: productModel.productName, 
-                  productPrice: productModel.productPrice,
-                  productSalled: productModel.productSaled,
-                  productImage: base64Decode(productModel.productImage)
+                  productName: detailPageController.products[0].productName,
+                  productPrice: detailPageController.products[0].productPrice,
+                  productImage: base64Decode(detailPageController.products[0].productImage),
+                ),
+                Obx(
+                  () => Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      review(
+                        width: width * 0.07,
+                        height: height * 0.01,
+                        salled: detailPageController.products[0].productSaled
+                      ),
+                      quantity(
+                        width: width * 0.08,
+                        height: height * 0.01,
+                        quantity: detailPageController.quantits.value,
+                        addFunc: () => detailPageController.plusQuantity(),
+                        minusFunc: () => detailPageController.minusQuantity()
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: height * 0.02),
+                Container(
+                  width: width,
+                    decoration: ShapeDecoration(
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          width: 1.50,
+                          strokeAlign: BorderSide.strokeAlignCenter,
+                        color: Color(0xFFE0E0E0),
+                      ),
+                    ),
+                  ),
                 ),
                 DetailPageComponentTwo(
-                  description: productModel.productDescription,
+                  description: detailPageController.products[0].productDescription,
                 ),
-                DetailPAgeComponentThree()
+                Obx(
+                  () => DetailPAgeComponentThree(
+                    quantits: detailPageController.quantits.value,
+                    product: detailPageController.products[0],
+                  ),
+                )
               ]
             ),
           ),

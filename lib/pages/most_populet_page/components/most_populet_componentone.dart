@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+import 'package:ecommerce_mobile/global/controllers/global_card_controller.dart';
 import 'package:ecommerce_mobile/global/widgets/hotizontal_product_card.dart';
 import 'package:ecommerce_mobile/pages/detail_page/detail_page_view.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class MostPopulerComponentOne extends StatelessWidget {
     required this.productName,
     required this.productPrice,
     required this.productImage,
-    required this.productModel
+    required this.productModel,
     });
 
     final int productLenght;
@@ -22,6 +23,7 @@ class MostPopulerComponentOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     double width = MediaQuery.sizeOf(context).width;
     double height= MediaQuery.sizeOf(context).height;
 
@@ -41,9 +43,16 @@ class MostPopulerComponentOne extends StatelessWidget {
             productRate: 5, 
             productSelled: 10, 
             productPrice: productPrice[index], 
-            onTap: () {
-              Get.to(() => DetailPage(productModel: productModel[index]));
+            onTapDetail: () {
+              Get.toNamed(
+                '/detail', 
+                arguments: productModel[index]
+              );
             },
+            onTapCart: () {
+              final GlobalController globalController = Get.put(GlobalController());
+              globalController.addToCart(productModel[index]);
+            }
           );
         },
       )

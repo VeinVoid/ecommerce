@@ -6,5 +6,7 @@ class LoginPageController extends GetxController{
   final UserService userService = UserService();
   RxList<User> users = <User>[].obs;
 
-  
+  void loginUser(String username, String password) {
+    userService.loginUser(username, password);
+  }
 }

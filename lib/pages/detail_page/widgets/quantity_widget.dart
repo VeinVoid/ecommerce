@@ -5,6 +5,9 @@ import 'package:flutter_svg/svg.dart';
 Widget quantity({
   required double width,
   required double height,
+  required int quantity,
+  required Function() addFunc,
+  required Function() minusFunc,
   }){
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -16,19 +19,25 @@ Widget quantity({
       SizedBox(height: height),
       Row(
         children: [
-          SvgPicture.asset(
-            minus,
-            width: width,
+          GestureDetector(
+            onTap: minusFunc,
+            child: SvgPicture.asset(
+              minus,
+              width: width,
+            ),
           ),
           SizedBox(width: width * 0.5),
           Text(
-            "1",
+            "$quantity",
             style: tsParaghraph14(fontWeight: FontWeight.w600),
           ),
           SizedBox(width: width * 0.5),
-          SvgPicture.asset(
-            plus,
-            width: width,
+          GestureDetector(
+            onTap: addFunc,
+            child: SvgPicture.asset(
+              plus,
+              width: width,
+            ),
           )
         ],
       )

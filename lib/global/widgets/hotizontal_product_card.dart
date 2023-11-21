@@ -11,21 +11,22 @@ Widget horizontalProductCard({
   required double productRate,
   required int productSelled,
   required int productPrice,
-  required Function() onTap
+  required Function() onTapDetail,
+  required Function() onTapCart
   }){
-  return GestureDetector(
-    onTap: onTap,
-    child: Container(
-      margin: EdgeInsets.symmetric(vertical: height * 0.08, horizontal: width * 0.02),
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
-        color: generalColorWhite,
-        borderRadius: BorderRadius.circular(5),
-        boxShadow: [
-          primaryBackDrop()
-        ]
-      ),
+  return Container(
+    margin: EdgeInsets.symmetric(vertical: height * 0.08),
+    width: width,
+    height: height,
+    decoration: BoxDecoration(
+      color: generalColorWhite,
+      borderRadius: BorderRadius.circular(5),
+      boxShadow: [
+        primaryBackDrop()
+      ]
+    ),
+    child: GestureDetector(
+      onTap: onTapDetail,
       child: Row(
         children: [
           SizedBox(width: 15),
@@ -81,11 +82,14 @@ Widget horizontalProductCard({
             ],
           ),
           Spacer(),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: SvgPicture.asset(
-              addCartHorizontal,
-              width: height - 30,
+          GestureDetector(
+            onTap: onTapCart,
+            child: Align(
+              alignment: Alignment.bottomRight,
+              child: SvgPicture.asset(
+                addCartHorizontal,
+                width: height - 30,
+              ),
             ),
           )
         ],

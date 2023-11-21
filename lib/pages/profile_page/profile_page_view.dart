@@ -33,8 +33,8 @@ class ProfilePage extends StatelessWidget {
             label: 'Profile',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Setting',
+            icon: Icon(Icons.shop),
+            label: 'Cart',
           ),
         ],
         currentIndex: 1,
@@ -45,7 +45,7 @@ class ProfilePage extends StatelessWidget {
           } else if (index == 1) {
             Get.toNamed('/profile');
           } else if (index == 2) {
-            Get.toNamed('/profile');
+            Get.toNamed('/cart');
           }
         },
       ),

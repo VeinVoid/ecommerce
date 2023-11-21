@@ -28,6 +28,7 @@ class RegisterPageComponentTwo extends StatelessWidget {
           height: height * 0.06, 
           hintText: "Username", 
           icon: Icons.person,
+          controller: usernameController
         ),
         SizedBox(height: height * 0.05),
         textFormLogin(
@@ -35,6 +36,7 @@ class RegisterPageComponentTwo extends StatelessWidget {
           height: height * 0.06, 
           hintText: "Password", 
           icon: Icons.lock,
+          controller: passwordController
         ),
         SizedBox(height: height * 0.05),
         textFormLogin(
@@ -42,6 +44,7 @@ class RegisterPageComponentTwo extends StatelessWidget {
           height: height * 0.06, 
           hintText: "Email", 
           icon: Icons.mail,
+          controller: emailController
         ),
         SizedBox(height: height * 0.05),
         textFormLogin(
@@ -49,6 +52,7 @@ class RegisterPageComponentTwo extends StatelessWidget {
           height: height * 0.06, 
           hintText: "Mobile", 
           icon: Icons.phone,
+          controller: phoneNumberController
         )
       ],
     );

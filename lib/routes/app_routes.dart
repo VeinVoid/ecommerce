@@ -10,8 +10,10 @@ abstract class Route{
   static const CATEGORY_PAGE = Path.CATEGORY_PAGE;
   static const MOSTPOPULER_PAGE = Path.MOSTPOPULER_PAGE;
   static const PROFILE_PAGE = Path.PROFILE_PAGE;
-  static const SETTING_PAGE = Path.SETTING_PAGE;
   static const CART_PAGE = Path.CART_PAGE;
+  static const ACCOUNT_PAGE = Path.ACCOUNT_PAGE;
+  static const MYORDER_PAGE = Path.MYORDER_PAGE;
+  static const MYADDRESS_PAGE = Path.MYADDRESS_PAGE;
 }
 
 abstract class Path{
@@ -25,6 +27,8 @@ abstract class Path{
   static const CATEGORY_PAGE = "/category";
   static const MOSTPOPULER_PAGE = "/mostpopuler";
   static const PROFILE_PAGE = "/profile";
-  static const SETTING_PAGE = "/setting";
   static const CART_PAGE = "/cart";
+  static const ACCOUNT_PAGE = "/account";
+  static const MYORDER_PAGE = "/myorder";
+  static const MYADDRESS_PAGE = "/myaddress";
 }

@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
         if (isLoggedIn) {
           Get.offNamed("/home");
         } else {
-          Get.offNamed("/login");
+          Get.offNamed("/home");
         }
       },
     );

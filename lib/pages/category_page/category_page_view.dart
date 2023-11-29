@@ -10,41 +10,83 @@ import 'package:get/get.dart';
 class CategoryPage extends StatelessWidget {
   const CategoryPage({
     super.key,
-    });
+  });
 
   @override
   Widget build(BuildContext context) {
-
-    final Category? receivedCategoryModel = Get.arguments['categoryModel'] as Category?;
-    final CategoryPageController categoryPageController = Get.find<CategoryPageController>();
+    final Category? receivedCategoryModel =
+        Get.arguments['categoryModel'] as Category?;
+    final CategoryPageController categoryPageController =
+        Get.find<CategoryPageController>();
     categoryPageController.onInit();
 
     double width = MediaQuery.sizeOf(context).width;
-    double height= MediaQuery.sizeOf(context).height;
+    double height = MediaQuery.sizeOf(context).height;
 
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(left: width * 0.05, right:  width * 0.05, top: height * 0.05),
+          margin: EdgeInsets.only(
+              left: width * 0.05, right: width * 0.05, top: height * 0.05),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // Menggunakan BackButtonWidget di sini
+              BackButtonWidget(),
               HeaderMainPage(
-                pageName: 'Category'
+                pageName: 'Category',
               ),
               SizedBox(height: height * 0.01),
               FilterMainPage(),
               CategoryPageProduct(
-                categoryName: receivedCategoryModel?.categoryName ?? 'Default Category Name',
+                categoryName: receivedCategoryModel?.categoryName ??
+                    'Default Category Name',
                 productLenght: categoryPageController.products.length,
-                productName: categoryPageController.products.map((product) => product.productName).toList(),
-                productPrice: categoryPageController.products.map((product) => product.productPrice).toList(), 
-                productImage: categoryPageController.products.map((product) => base64.decode(product.productImage)).toList(),
+                productName: categoryPageController.products
+                    .map((product) => product.productName)
+                    .toList(),
+                productPrice: categoryPageController.products
+                    .map((product) => product.productPrice)
+                    .toList(),
+                productImage: categoryPageController.products
+                    .map((product) => base64.decode(product.productImage))
+                    .toList(),
                 productModel: categoryPageController.products,
-              )
+              ),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class BackButtonWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              padding: EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.grey[300],
+              ),
+              child: Icon(
+                Icons.arrow_back,
+                size: 24,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
